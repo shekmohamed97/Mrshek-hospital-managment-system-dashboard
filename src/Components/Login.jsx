@@ -28,7 +28,7 @@ const Login = () => {
       ).then((res) => {
         toast.success(res.data.message);
         setIsAuthenticated(true);
-        navigateTo("/");
+        navigateTo("/dashboard");
         setEmail("");
         setPassword("");
         setConfirmPassword("");
@@ -55,8 +55,7 @@ const Login = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          {/* <div></div> */}
-          {/* <h1></h1> */}
+         
           <input
             type="password"
             placeholder="Password"
